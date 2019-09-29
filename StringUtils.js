@@ -1,3 +1,5 @@
+import { randomPick } from './ArrayUtils'
+
 /**
      @param Number l
     @param String[] pool 
@@ -13,7 +15,7 @@ export const generateRandom = (l = 6, pool) => {
     let s = '';
 
     for (let i = 0; i < l; i++) {
-        s += ArrayUtils.randomPick(pool);
+        s += randomPick(pool);
     }
 
     return s;
@@ -26,7 +28,7 @@ export const unCapitalize = s => {
     return s && s[0].toLowerCase() + s.slice(1);
 }
 export const capitalizeWords = s => {
-    return s.split(' ').map(s => StringUtils.capitalize(s)).join(' ');
+    return s.split(' ').map(s => capitalize(s)).join(' ');
 }
 export const replaceAll = (str, search, replacement) => {
     return str.replace(new RegExp(search, 'g'), replacement);
