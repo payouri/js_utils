@@ -1,3 +1,5 @@
+import { isObject } from './Validators'
+
 export const hasProperties = function (obj, propArray) {
     return propArray.reduce((acc, prop) => acc && obj.hasOwnProperty(prop), true);
 };
@@ -12,15 +14,15 @@ export const getDiffs = function (o1, o2) {
 };
 export const mergeDeep = (target, source) => {
     let output = Object.assign({}, target);
-    if (Validators.isObject(target) && Validators.isObject(source)) {
+    if (isObject(target) && isObject(source)) {
         Object.keys(source).forEach(key => {
-            if (Validators.isObject(source[key])) {
+            if (isObject(source[key])) {
                 if (!(key in target))
                     Object.assign(output, {
                         [key]: source[key]
                     });
                 else
-                    output[key] = ObjectUtils.mergeDeep(target[key], source[key]);
+                    output[key] = mergeDeep(target[key], source[key]);
             } else {
                 Object.assign(output, {
                     [key]: source[key]
