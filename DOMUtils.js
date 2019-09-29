@@ -86,13 +86,13 @@ export const createElement = ({text = '', classes = [], attributes = {}, styles 
     const elem = document.createElement(tag);
       
     if(typeof attributes == 'string'|| Object.entries(attributes).length > 0) {
-        DOMUtils.setAttributes(elem, attributes);
+        setAttributes(elem, attributes);
     }
     if(typeof styles == 'string' || Object.entries(styles).length > 0) {
-        DOMUtils.setStyles(elem, styles);
+        setStyles(elem, styles);
     }
     if(classes.length > 0) {
-        DOMUtils.setClasses(elem, classes);
+        setClasses(elem, classes);
     }
       
     elem.innerHTML = text;
@@ -355,7 +355,7 @@ export const removeStyles = (el, styles) => {
 export const wrapNode = (el, {...options} = {}) => {
     if(el instanceof HTMLElement) {
         
-        const wrap = DOMUtils.createElement({...options});
+        const wrap = createElement({...options});
         el.parentNode.replaceChild(wrap, el);
         wrap.appendChild(el);
         return wrap;
@@ -413,12 +413,12 @@ export const addChildrenListener = (parentEl, childrenSelector, events, handler,
   //         if(id && target.id !== id)
   //           return;
              
-  //         // console.log(!DOMUtils.hasClasses(target, classes));
-  //         if(classes && !DOMUtils.hasClasses(target, classes))
+  //         // console.log(!hasClasses(target, classes));
+  //         if(classes && !hasClasses(target, classes))
   //           return;
           
-  //         // console.log(!DOMUtils.hasAttributes(target, attributes))
-  //         if(attributes && !DOMUtils.hasAttributes(target, attributes))
+  //         // console.log(!hasAttributes(target, attributes))
+  //         if(attributes && !hasAttributes(target, attributes))
   //           return;
           
   //         if(typeof childrenSelector == 'string' && !target.matches(childrenSelector))
@@ -444,12 +444,37 @@ export const addChildrenListener = (parentEl, childrenSelector, events, handler,
           }        
         }
         
-        DOMUtils.attachEvts(parentEl, handlerWrapper, events, true);
+        attachEvts(parentEl, handlerWrapper, events, true);
         
       }
       else
         throw new TypeError('Param 1 "parentEl", is not an instance of HTMLElement');
 };
 
-// DOMUtils.addListeners = DOMUtils.attachEvts;
-//   DOMUtils.removeListeners = DOMUtils.detachEvts;
+export default {
+    appendChildren,
+    addListeners: attachEvts,
+    attachEvts,
+    removeListeners: detachEvts,
+    detachEvts,
+    createElement,
+    getBoundEvents,
+    isChildrenOf,
+    moveNode,
+    setClasses,
+    removeClasses,
+    setAttributes,
+    getAttributes,
+    removeAttributes,
+    setDataAttributes,
+    removeDataAttributes,
+    setProperties,
+    removeProperties,
+    setStyles,
+    removeStyles,
+    wrapNode,
+    parseSelector,
+    hasClasses,
+    hasAttributes,
+    addChildrenListener,
+}

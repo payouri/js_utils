@@ -1,4 +1,6 @@
-export const createDOMCanvas = ({...args}) => DOMUtils.createElement({
+import { createElement } from './DOMUtils'
+
+export const createDOMCanvas = ({...args}) => createElement({
     tag: 'canvas',
     ...args
 });

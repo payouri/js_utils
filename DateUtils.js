@@ -32,7 +32,7 @@ export const timeAgo = function(time, { templates }) {
         years: "%d years"
     };
   
-    const currentTemplates = { ...defaultTemplates, ...templates}
+    const currentTemplates = { ...defaultTemplates, ...templates }
 
     const getTemplate = function (t, n) {
         return currentTemplates[t] && currentTemplates[t].replace(/%d/i, Math.abs(Math.round(n)));
