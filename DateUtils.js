@@ -1,21 +1,81 @@
-
+/**
+ * 
+ * @param {Number} month from 0 to 11
+ * @param {Number} year from 1970 YYYY format
+*/
+export const daysInMonth = function (month, year) {
+    return new Date(year, month + 1, 0).getDate();
+}
+/**
+* 
+* @param {Number} month from 0 to 11
+* @param {Number} year from 1970 YYYY format
+*/
+export const getLastDayOfTheMonth = function(month, year) {
+    return new Date(year, month, daysInMonth(month, year));
+}
+/**
+* 
+* @param {Number} month from 0 to 11
+* @param {Number} year from 1970 YYYY format
+*/
+export const getFirstDayOfTheMonth = function(month, year) {
+    return new Date(year, month, 1);
+}
+/**
+ * @typedef formatObject
+ * @property {String} locale country locale
+ * @property {Object} [options] toLocaleDateString format object
+*/
+/**  
+ * @typedef format
+ * @type {"iso"|"string"|formatObject}
+ */
+/**
+ * Convert a Mongo ObjectID to a Date Object or a Date String depending on format param
+ * 
+ * @param {ObjectID} objectId object id to transform
+ * @param {format} [format] if undefined return Date object
+ */
 export const dateFromObjectId = function(objectId, format) {
   
-      if(typeof format == 'object' && format.locale)
-        return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toLocaleDateString(format.locale, format.options || {});
-  
-      if(format == 'iso')
-        return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toISOString();
-  
-      if(format == 'string')
-        return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toDateString();
-  
-      return new Date(parseInt(objectId.substring(0, 8), 16) * 1000);
+    if(typeof format == 'object' && format.locale)
+      return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toLocaleDateString(format.locale, format.options || {});
+
+    if(format == 'iso')
+      return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toISOString();
+
+    if(format == 'string')
+      return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toDateString();
+
+    return new Date(parseInt(objectId.substring(0, 8), 16) * 1000);
   
 };
-
-export const timeAgo = function(time, { templates }) {
-  
+/**
+ * 
+ * @param {Date|Number} time 
+ * @param {Object} options template property allow you to use different string for all time frames, prefix, and suffix 
+ * @param {templates} [options.templates]
+ */
+export const timeAgo = function(time, { templates } = {}) {
+    /**
+     * @typedef {Object} templates
+     * @property {string} prefix
+     * @property {string} suffix
+     * @property {string} seconds
+     * @property {string} minute
+     * @property {string} minutes
+     * @property {string} hour
+     * @property {string} hours
+     * @property {string} day
+     * @property {string} days
+     * @property {string} month
+     * @property {string} months
+     * @property {string} year
+     * @property {string} years
+     * @property {string} prefix
+     * @property {string} prefix
+    */
     const defaultTemplates = {
         prefix: "",
         suffix: " ago",
@@ -76,4 +136,7 @@ export const timeAgo = function(time, { templates }) {
 export default {
     dateFromObjectId,
     timeAgo,
+    daysInMonth,
+    getLastDayOfTheMonth,
+    getFirstDayOfTheMonth,
 }
