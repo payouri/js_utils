@@ -1,0 +1,33 @@
+{
+  "name": "@youri-kane/js_utils",
+  "version": "1.0.0",
+  "description": "a few javascript functions used often we don't want to rewrite all the time",
+  "type": "module",
+  "main": "./Utils.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/payouri/js_utils.git"
+  },
+  "keywords": [
+    "utility",
+    "helpful"
+  ],
+  "author": "Youri Pailloux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/payouri/js_utils/issues"
+  },
+  "homepage": "https://github.com/payouri/js_utils#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.5",
+    "babel-jest": "^24.9.0",
+    "canvas": "^2.6.0",
+    "jest": "^24.9.0",
+    "jest-canvas-mock": "^2.2.0"
+  },
+  "dependencies": {}
+}

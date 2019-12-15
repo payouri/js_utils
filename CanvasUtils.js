@@ -1,14 +1,16 @@
 import { createElement } from './DOMUtils'
 
-export const createDOMCanvas = ({...args}) => createElement({
+export const createDOMCanvas = ({...args} = {}) => createElement({
     tag: 'canvas',
     ...args
 });
 export const CanvasView = class {
-    constructor(canvasElem, {...options} = {}) {
-        const { root } = options;
-        this.DOMElem = canvasElem || CanvasUtils.createDOMCanvas(...options);
-        this.root = canvasElem?canvasElem.parentNode:root
+    constructor(canvasElem, { root, context = '' } = {}) {
+        
+        this._DOMElem = canvasElem || CanvasUtils.createDOMCanvas(...options);
+        this._ctx = this._DOMElem.getContext(context ? context : '2d')
+        this._root = root ? root : this._DOMElem.parentNode
+
     }
     get DOMElem() {
         return this._DOMElem;

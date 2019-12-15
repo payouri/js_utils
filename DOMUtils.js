@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {HTMLElement} parentEl 
+ * @param  {HTMLElement|HTMLElement[]} children 
+ */
 export const appendChildren = (parentEl, ...children) => {
       children.forEach(child => {
         
@@ -19,24 +24,26 @@ export const appendChildren = (parentEl, ...children) => {
 };
 
 /**
-* @param el: Node
-* @param cb: Function
-* @param evts: Array
-* @param bubble: Boolean
+* @param {Node} el Node
+* @param {Function} cb 
+* @param {Array} evts 
+* @param {Boolean} bubble 
 *
-* @return void
+* @return el
 **/
 export const attachEvts = (el, cb, evts, bubble = false) => {
     if(el instanceof HTMLElement || el instanceof window.constructor)
         if(typeof cb == 'function') {
-            if(Array.isArray(evts))
+            if(Array.isArray(evts)) {
                 for(let e of evts) {
                     if(typeof e == 'string')
                     el.addEventListener(e, cb, bubble);
+                    return el;
                 }
-            else if(typeof evts == 'string')
+            } else if(typeof evts == 'string') {
                 el.addEventListener(evts, cb, bubble);
-            else
+                return el;
+            } else
                 throw new TypeError('Param 3 "evts", is not an array');
         } else
             throw new TypeError('Param 2 "cb", is not a function');
@@ -59,25 +66,29 @@ export const detachEvts = (el, cb, evts, bubble = false) => {
 
     if(el instanceof HTMLElement || el instanceof window.constructor)
         if(typeof cb == 'function') {
-            if(Array.isArray(evts))
+            if(Array.isArray(evts)) {
                 for(let e of evts) {
-                    if(typeof e == 'string')
+                    if(typeof e == 'string') {
                         el.removeEventListener(e, cb, bubble);
+                    }
                 }
-        else
-            throw new Error('TypeError: Param 3 "evts", is not an array')
-        }
-        else
-            throw new Error('TypeError: Param 2 "cb", is not a function')  
+                return el
+            } else if(typeof e == 'string') {
+                el.removeEventListener(e, cb, bubble);
+                return el
+            } else 
+                throw new TypeError('Param 3 "evts", is not an array')
+        } else
+            throw new TypeError('Param 2 "cb", is not a function')  
     else
-        throw new Error('TypeError: Param 1 "el", is not an instance of HTMLElement');
+        throw new TypeError('Param 1 "el", is not an instance of HTMLElement');
 };
 
 /**
 * @param options: {attributes: object, styles: object, classes: string[]}
 * @return instance of HTMLElement
 **/
-export const createElement = ({text = '', classes = [], attributes = {}, styles = {}, ...rest}) => {
+export const createElement = ({text = '', classes = [], attributes = {}, styles = {}, ...rest} = {}) => {
     let { tag } = rest;
       
     if(!tag || typeof tag != 'string' )
@@ -124,17 +135,18 @@ export const isChildrenOf = (childNode, parentNode)  => {
 * @param newParent Node
 */
 export const moveNode = (el, newParent) => {
-        if(el instanceof HTMLElement)
-            if(newParent instanceof HTMLElement)
-                if(!newParent.contains(el)) {
-                    if(el.parentNode) 
-                        el.parentNode.removeChild(el);
-                    newParent.appendChild(el);
-                }
-        else
-            throw new Error('TypeError: Param 2 "newParent", is not an instance of HTMLElement');  
+    if(el instanceof HTMLElement) 
+        if(newParent instanceof HTMLElement) {
+            if(!newParent.contains(el)) {
+                if(el.parentNode) 
+                    el.parentNode.removeChild(el);
+                newParent.appendChild(el);
+            }
+            return el
+        } else
+            throw new TypeError('Param 2 "newParent", is not an instance of HTMLElement');  
     else
-        throw new Error('TypeError: Param 1 "el", is not an instance of HTMLElement');
+        throw new TypeError('Param 1 "el", is not an instance of HTMLElement');
 };
 
 /**
@@ -148,19 +160,17 @@ export const setClasses = (el, classes = []) => {
         if(Array.isArray(classes)) {
             if(el.classList.length == 0) {
                 el.classList = classes.join(' ');
-                return;
             }
-        else 
-            for(let c of classes) {
-                if(typeof c == 'string')
-                    el.classList.add(c);
-                return el;
+            else {
+                for(let c of classes) {
+                    if(typeof c == 'string')
+                        el.classList.add(c);
+                }
             }
         } else if(typeof classes == 'string') {
             el.classList += `${el.classList.length>0?' ':''}${classes}`;  
-            return el;
         }
-        return;
+        return el;
     } else
         throw new Error('Param 1 "el", is not an instance of HTMLElement');
 };

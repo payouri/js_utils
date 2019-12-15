@@ -1,39 +1,39 @@
 export const intersection = (arr1, arr2) => arr1.filter(element => arr2.includes(element));
 export const randomPick = array => {
     if (Array.isArray(array))
-        return array[Math.floor(Math.random() * myArray.length)];
+        return array[Math.floor(Math.random() * array.length)];
     else
         throw new TypeError('Param "array" is not an array');
 };
 export const chunkArray = (array, size) => {
     let result = []
-    for (i = 0; i < array.length; i += size) {
+    let chunkIndex = 0;
+    for (let i = 0, n = array.length; i < n; i += size) {
         let chunk = array.slice(i, i + size)
-        result.push(chunk)
+        result[chunkIndex] = chunk
+        chunkIndex++
+    }
+    return result
+};
+export const falsyBounce = array => {
+    let result = []
+    //loop through with each array value
+    for (let value of array) {
+        // push into result if truthy
+        if (value) {
+            result.push(value)
+        }
     }
     return result
 };
 
-export const falsyBounce = array => {
-        let result = []
-        //loop through with each array value
-        for (let value of array) {
-            // push into result if truthy
-            if (value) {
-                result.push(value)
-            }
-        }
-        return result
-    };
-
-export const mergeArrays = (...arrays) => {
+export const mergeArrays = (...arrays) => (removeDups = false) => {
     let jointArray = []
 
-    arrays.forEach(array => {
-        jointArray = [...jointArray, ...array]
-    })
-    const uniqueArray = jointArray.filter((item, index) => jointArray.indexOf(item) === index)
-    return uniqueArray
+    for(let i = 0, n = arrays.length; i < n; i++) {
+        jointArray = [...jointArray, ...arrays[i]]
+    }
+    return removeDups ? jointArray.filter((item, index) => jointArray.indexOf(item) === index) : jointArray
 }
 
 export default {
