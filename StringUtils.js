@@ -35,7 +35,7 @@ export const replaceAll = (str, search, replacement) => {
 }
 export const stringToFunction = str => {
     let arr = str.split("."),
-        fn = (window || this);
+        fn = (global || this);
     for (let i = 0, len = arr.length; i < len; i++) {
         fn = fn[arr[i]];
     }
@@ -84,6 +84,10 @@ export const encodeHTML = s => {
     return typeof s == 'string' ? s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;') : s;
 }
 
+export const generateHexKey = () => {
+    return (new Date).getTime().toString(16)
+}
+
 export default {
     capitalize,
     capitalizeWords,
@@ -94,4 +98,5 @@ export default {
     unCapitalize,
     nFormatter,
     encodeHTML,
+    generateHexKey,
 }
