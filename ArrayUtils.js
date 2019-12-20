@@ -36,10 +36,19 @@ export const mergeArrays = (...arrays) => (removeDups = false) => {
     return removeDups ? jointArray.filter((item, index) => jointArray.indexOf(item) === index) : jointArray
 }
 
+export const getElementAt = function(iterable, n) {
+    if(iterable.length == 0) {
+        return undefined;
+    }
+    const i = n%iterable.length;
+    return i >= 0 ? iterable[i] : iterable[iterable.length + i];
+}
+
 export default {
     chunkArray,
     falsyBounce,
     intersection,
     mergeArrays,
     randomPick,
+    getElementAt,
 }

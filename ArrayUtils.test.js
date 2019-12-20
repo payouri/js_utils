@@ -26,3 +26,11 @@ test('mergeArrays remove duplicates', () => {
     const merge = jest.fn(() => ArrayUtils.mergeArrays([1, 3, 7], [7, 5, 4, 10], [3, 4])(true))
     expect(merge()).toHaveLength(6)
 })
+test('getElementAt positive', () => {
+    const fn = jest.fn(() => ArrayUtils.getElementAt([1, 2, 3, 4, 5], 7))
+    expect(fn()).toBe(3)
+})
+test('getElementAt negative', () => {
+    const fn = jest.fn(() => ArrayUtils.getElementAt([1, 2, 3, 4, 5], -4))
+    expect(fn()).toBe(2)
+})
