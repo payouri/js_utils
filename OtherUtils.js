@@ -138,7 +138,17 @@ export const mouseTouchOffset = event => {
 //       }
 //   }
 // },
+export const getFirstTouch = ({ touches }) => {
+
+    if(touches && touches[0])
+        return touches[0]
+    else
+        return null
+
+}
+
 export default {
     getInlineTransforms,
     mouseTouchOffset,
+    getFirstTouch,
 }
