@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./Utils.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
