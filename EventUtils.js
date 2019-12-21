@@ -1,13 +1,26 @@
-export const debounce = function(fn, time = 250, immediate = false) {
+export const debounce = function(fn, time, immediate) {
     let timeout;
   
-    return function(...args) {
-        const functionCall = () => fn.apply(this, args);
+    return function() {
+      const context = this,
+        args = arguments;
   
-        clearTimeout(timeout);
-        timeout = setTimeout(functionCall, time);
+      const callNow = immediate && !timeout;
+  
+      clearTimeout(timeout);
+  
+      timeout = setTimeout(function() {
+  
+        timeout = null;
+  
+        if (!immediate) {
+          fn.apply(context, args);
+        }
+      }, time);
+  
+      if (callNow) fn.apply(context, args);
     }
-};
+  }
 
 export const throttle = function(fn, delay = 250) {
 
