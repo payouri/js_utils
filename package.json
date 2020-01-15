@@ -1,11 +1,14 @@
 {
   "name": "@youri-kane/js_utils",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "a few javascript functions used often we don't want to rewrite all the time",
   "type": "module",
-  "main": "./Utils.js",
+  "main": "dist/js_utils.js",
+  "module": "./src/index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "build": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js ./src/index.js",
+    "test": "jest",
+    "test-verbose": "jest --coverage --config ./jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +28,11 @@
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.5",
     "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
     "canvas": "^2.6.0",
     "jest": "^24.9.0",
-    "jest-canvas-mock": "^2.2.0"
-  },
-  "dependencies": {}
+    "jest-canvas-mock": "^2.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
 }
