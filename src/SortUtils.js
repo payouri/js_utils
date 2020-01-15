@@ -1,19 +1,29 @@
 export const localeSort = (a, b, locale, opts) => {
-    return a.localeCompare(b, locale, opts);
+    return a.localeCompare(b, locale, opts)
+}
+export const sortByNestedProperty = (arr, prop) => {
+    prop = prop.split('.')
+    const len = prop.length
+    arr.sort(function (a, b) {
+        let i = 0
+        while (i < len) { a = a[prop[i]]; b = b[prop[i]]; i++ }
+        return (a < b ? -1 : (a > b ? 1 : 0))
+    })
+    return arr
 }
 export const quickSort = list => {
 
     if (list.length < 2)
-        return list;
+        return list
 
-    let pivot = list[0];
-    let left = [];
-    let right = [];
+    let pivot = list[0]
+    let left = []
+    let right = []
     for (let i = 1, total = list.length; i < total; i++) {
         if (list[i] < pivot)
-            left.push(list[i]);
+            left.push(list[i])
         else
-            right.push(list[i]);
+            right.push(list[i])
     }
 
     return [
