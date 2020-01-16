@@ -40,15 +40,15 @@ export const getFirstDayOfTheMonth = function(month, year) {
 export const dateFromObjectId = function(objectId, format) {
   
     if(typeof format == 'object' && format.locale)
-      return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toLocaleDateString(format.locale, format.options || {});
+      return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toLocaleDateString(format.locale, format.options || {})
 
     if(format == 'iso')
-      return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toISOString();
+      return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toISOString()
 
     if(format == 'string')
-      return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toDateString();
+      return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toDateString()
 
-    return new Date(parseInt(objectId.substring(0, 8), 16) * 1000);
+    return new Date(parseInt(objectId.substring(0, 8), 16) * 1000).getTime()
   
 };
 /**

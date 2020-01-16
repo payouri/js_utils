@@ -12,7 +12,7 @@ export const calcPointCoordsOnCircle = function(cx, cy, r, ang) {
  * @return number
  **/
 export const distBetweenTwoPts = (a, b) => {
-    if (a.x && a.y && b.x && b.y)
+    if (a && b && a.x && a.y && b.x && b.y)
         return Math.sqrt(Math.pow(b.y - a.y, 2) + Math.pow(b.x - a.x, 2));
     else
         return NaN;

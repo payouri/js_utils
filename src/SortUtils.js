@@ -1,15 +1,14 @@
 export const localeSort = (a, b, locale, opts) => {
     return a.localeCompare(b, locale, opts)
 }
-export const sortByNestedProperty = (arr, prop) => {
+export const sortByNestedProperty = prop => {
     prop = prop.split('.')
     const len = prop.length
-    arr.sort(function (a, b) {
+    return function (a, b) {
         let i = 0
         while (i < len) { a = a[prop[i]]; b = b[prop[i]]; i++ }
         return (a < b ? -1 : (a > b ? 1 : 0))
-    })
-    return arr
+    }
 }
 export const quickSort = list => {
 
