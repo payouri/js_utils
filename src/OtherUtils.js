@@ -105,10 +105,12 @@ export const mouseTouchOffset = event => {
     const type = event.type ? event.type : null;
 
     const elemBCR = event.currentTarget && !(event.currentTarget instanceof window.constructor) ?
-        event.currentTarget.getBoundingClientRect() : {
+        event.currentTarget.getBoundingClientRect() :
+        event.target && !(event.target instanceof window.constructor) ? 
+        event.target.getBoundingClientRect() : {
             x: 0,
             y: 0
-        };
+        }
 
     if (event instanceof MouseEvent) {
         return {
