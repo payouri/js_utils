@@ -34,7 +34,7 @@ export const debounce = function (fn, time, immediate) {
  * @function throttle
  * @description
  * @param {Function} fn 
- * @param {Number} delay 
+ * @param {Number} [delay=250] 
 */
 export const throttle = function (fn, delay = 250) {
 

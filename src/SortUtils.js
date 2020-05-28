@@ -1,11 +1,11 @@
 /** @module SortUtils */
 /**
  * @function localeSort
- * @description
- * @param {*} a 
- * @param {*} b 
- * @param {*} locale 
- * @param {*} opts 
+ * @description Shortcut for String.prototype.localeCompare function
+ * @param {String} a 
+ * @param {String} b 
+ * @param {String} locale for exemple 
+ * @param {Intl.Collator} opts 
 */
 export const localeSort = (a, b, locale, opts) => {
     return a.localeCompare(b, locale, opts)

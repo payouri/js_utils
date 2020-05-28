@@ -38,7 +38,7 @@ export const distBetweenTwoPts = (a, b) => {
  * @param {Number} radius circle radius
  * @return {Number}
 */
-export const getCirclePerimeter = (radius) => {
+export const getCirclePerimeter = radius => {
     const r = Number(radius);
     if (!isNaN(r))
         return 2 * Math.PI * r;

@@ -5,7 +5,7 @@ import { randomPick } from './ArrayUtils'
 /**
  * @function generateRandom
  * @description Generate a random string from a number of character and a pool of 
- * @param {Number} l string length
+ * @param {Number} [l=6] string length
  * @param {String[]} pool possible characters to generate the string
  * 
  * @returns {String}
@@ -116,7 +116,7 @@ export const secsToMin = d => {
  * @function nFormatter
  * @description format a number in counterpart unit
  * @param {Number} num number to transform
- * @param {Number} digits number of decimal digits
+ * @param {Number} [digits=0] number of decimal digits
  * @example
  * //returns "10M"
  * nFormatter(10000000)

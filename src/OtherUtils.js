@@ -1,9 +1,19 @@
 /** @module OtherUtils */
 
+/**
+ * Adds a function to the microtask queue
+ * 
+ * @param {Function} func 
+*/
 export const nextTick = func => {
     setTimeout(func, 0)
 }
 
+/**
+ * Needs to be refactored and tested
+ * 
+ * @param {Element} HTMLElem 
+*/
 export const getInlineTransforms = HTMLElem => {
     const transformTypes = [{
         name: 'scale',
@@ -107,9 +117,13 @@ export const getInlineTransforms = HTMLElem => {
     });
 }
 
+/**
+ * Normalize touch and mouse event x and y.
+ * For touch events it only gets touches[0]
+ * 
+ * @param {Event} event 
+*/
 export const mouseTouchOffset = event => {
-
-    const type = event.type ? event.type : null;
 
     const elemBCR = event.currentTarget && typeof event.currentTarget.getBoundingClientRect == 'function' ?
         event.currentTarget.getBoundingClientRect() :
@@ -147,6 +161,10 @@ export const mouseTouchOffset = event => {
 //       }
 //   }
 // },
+/**
+ * Get touches[0] if it is set or returns null otherwise
+ * @param {TouchEvent} 
+*/
 export const getFirstTouch = ({ touches }) => {
 
     if (touches && touches[0])
