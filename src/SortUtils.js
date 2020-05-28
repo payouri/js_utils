@@ -1,6 +1,22 @@
+/** @module SortUtils */
+/**
+ * @function localeSort
+ * @description
+ * @param {*} a 
+ * @param {*} b 
+ * @param {*} locale 
+ * @param {*} opts 
+*/
 export const localeSort = (a, b, locale, opts) => {
     return a.localeCompare(b, locale, opts)
 }
+/**
+ * @function sortByNestedProperty
+ * @description sort by object properties
+ * @param {String|Number|Symbol} prop object property to sort items by
+ * 
+ * @returns {Function} sort function 
+*/
 export const sortByNestedProperty = prop => {
     prop = prop.split('.')
     const len = prop.length
@@ -10,6 +26,13 @@ export const sortByNestedProperty = prop => {
         return (a < b ? -1 : (a > b ? 1 : 0))
     }
 }
+/**
+ * @function quickSort
+ * @description
+ * @param {Array} list 
+ * 
+ * @returns {Array}
+*/
 export const quickSort = list => {
 
     if (list.length < 2)
@@ -34,6 +57,7 @@ export const quickSort = list => {
 }
 
 export default {
+    sortByNestedProperty,
     localeSort,
     quickSort,
 }

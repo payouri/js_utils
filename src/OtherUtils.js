@@ -1,40 +1,46 @@
+/** @module OtherUtils */
+
+export const nextTick = func => {
+    setTimeout(func, 0)
+}
+
 export const getInlineTransforms = HTMLElem => {
     const transformTypes = [{
-                name: 'scale',
-                variants: ['X', 'Y', 'Z', '3d'],
-            },
-            {
-                name: 'translate',
-                variants: ['X', 'Y', 'Z', '3d'],
-            },
-            {
-                name: 'rotate',
-                variants: ['X', 'Y', 'Z', '3d'],
-            },
-            {
-                name: 'skew',
-                variants: ['X', 'Y'],
-            },
-            {
-                name: 'perspective',
-                variants: [],
-            },
-            {
-                name: 'matrix',
-                variants: ['3d'],
-            },
-        ],
+        name: 'scale',
+        variants: ['X', 'Y', 'Z', '3d'],
+    },
+    {
+        name: 'translate',
+        variants: ['X', 'Y', 'Z', '3d'],
+    },
+    {
+        name: 'rotate',
+        variants: ['X', 'Y', 'Z', '3d'],
+    },
+    {
+        name: 'skew',
+        variants: ['X', 'Y'],
+    },
+    {
+        name: 'perspective',
+        variants: [],
+    },
+    {
+        name: 'matrix',
+        variants: ['3d'],
+    },
+    ],
         elemTransformStr = HTMLElem.style.transform.toLowerCase();
 
     return transformTypes.map(t => {
         const transformModel = {
-                name: '',
-                transform: {
-                    X: 0,
-                    Y: 0,
-                    Z: 0,
-                }
-            },
+            name: '',
+            transform: {
+                X: 0,
+                Y: 0,
+                Z: 0,
+            }
+        },
             transformPosition = elemTransformStr.indexOf(t.name);
         transformModel.name = t.name;
         if (transformPosition != -1) {
@@ -100,17 +106,18 @@ export const getInlineTransforms = HTMLElem => {
         return transformModel;
     });
 }
+
 export const mouseTouchOffset = event => {
 
     const type = event.type ? event.type : null;
 
     const elemBCR = event.currentTarget && typeof event.currentTarget.getBoundingClientRect == 'function' ?
         event.currentTarget.getBoundingClientRect() :
-        event.target && typeof event.target.getBoundingClientRect == 'function' ? 
-        event.target.getBoundingClientRect() : {
-            x: 0,
-            y: 0
-        }
+        event.target && typeof event.target.getBoundingClientRect == 'function' ?
+            event.target.getBoundingClientRect() : {
+                x: 0,
+                y: 0
+            }
 
     if (event instanceof MouseEvent) {
         return {
@@ -142,7 +149,7 @@ export const mouseTouchOffset = event => {
 // },
 export const getFirstTouch = ({ touches }) => {
 
-    if(touches && touches[0])
+    if (touches && touches[0])
         return touches[0]
     else
         return null
@@ -153,4 +160,5 @@ export default {
     getInlineTransforms,
     mouseTouchOffset,
     getFirstTouch,
+    nextTick,
 }

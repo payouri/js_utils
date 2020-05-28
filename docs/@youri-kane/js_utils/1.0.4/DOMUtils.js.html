@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DOMUtils.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html">Extra</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#addListeners">addListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#appendChildren">appendChildren</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#getAttributes">getAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeAttributes">removeAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeClasses">removeClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeDataAttributes">removeDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeListeners">removeListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeProperties">removeProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeStyles">removeStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setAttributes">setAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setClasses">setClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setDataAttributes">setDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setProperties">setProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setStyles">setStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#wrapNode">wrapNode</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-ArrayUtils.html">ArrayUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~chunkArray">chunkArray</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~falsyBounce">falsyBounce</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~getElementAt">getElementAt</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~intersection">intersection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~mergeArrays">mergeArrays</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~randomPick">randomPick</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-AsyncUtils.html">AsyncUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-AsyncUtils.html#~batchPromiseExecution">batchPromiseExecution</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-CanvasUtils.html">CanvasUtils</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-DateUtils.html">DateUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~dateFromObjectId">dateFromObjectId</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~daysInMonth">daysInMonth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~getFirstDayOfTheMonth">getFirstDayOfTheMonth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~getLastDayOfTheMonth">getLastDayOfTheMonth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~timeAgo">timeAgo</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-DOMUtils.html">DOMUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~addChildrenListener">addChildrenListener</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~addListeners">addListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~appendChildren">appendChildren</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~attachEvts">attachEvts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~createElement">createElement</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~detachEvts">detachEvts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~findElements">findElements</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~getAttributes">getAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~getBoundEvents">getBoundEvents</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~hasAttributes">hasAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~hasClasses">hasClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~isChildrenOfn">isChildrenOfn</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~moveNode">moveNode</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeAttributes">removeAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeClasses">removeClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeDataAttributes">removeDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeListeners">removeListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeProperties">removeProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeStyles">removeStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setAttributes">setAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setClasses">setClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setDataAttributes">setDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setProperties">setProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setStyles">setStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~wrapNode">wrapNode</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-EventUtils.html">EventUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-EventUtils.html#~debounce">debounce</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-EventUtils.html#~throttle">throttle</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-GeomUtils.html">GeomUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~calcPointCoordsOnCircle">calcPointCoordsOnCircle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~distBetweenTwoPts">distBetweenTwoPts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~getCirclePerimeter">getCirclePerimeter</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~getDiscArea">getDiscArea</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-MathUtils.html">MathUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-MathUtils.html#~clamp">clamp</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-MathUtils.html#~random">random</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-MathUtils.html#~randomInt">randomInt</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-NodeEnhancer.html">NodeEnhancer</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-ObjectUtils.html">ObjectUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ObjectUtils.html#~getDiffs">getDiffs</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ObjectUtils.html#~hasProperties">hasProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ObjectUtils.html#~mergeDeep">mergeDeep</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-OtherUtils.html">OtherUtils</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-SortUtils.html">SortUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-SortUtils.html#~localeSort">localeSort</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-SortUtils.html#~quickSort">quickSort</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-SortUtils.html#~sortByNestedProperty">sortByNestedProperty</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-StringUtils.html">StringUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~capitalize">capitalize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~capitalizeWords">capitalizeWords</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~encodeHTML">encodeHTML</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~generateHexKey">generateHexKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~generateRandom">generateRandom</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~nFormatter">nFormatter</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~replaceAll">replaceAll</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~secsToMin">secsToMin</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~stringToFunction">stringToFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~unCapitalize">unCapitalize</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Validators.html">Validators</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Validators.html#~isObject">isObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Validators.html#~isValidEmail">isValidEmail</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Validators.html#~isValidPhone">isValidPhone</a></span></li><li class="nav-heading">Namespaces</li><li class="nav-heading"><span class="nav-item-type type-namespace">N</span><span class="nav-item-name"><a href="module-ArrayUtils-ArrayUtils.html">ArrayUtils</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">DOMUtils.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module DOMUtils */
+import { isObject } from './Validators';
+/**
+ * @function appendChildren
+ * @description Append children element to parent element
+ * 
+ * @param {HTMLElement} parentEl - parent element
+ * @param  {...HTMLElement} children - elements
+ * @returns {HTMLElement} parent element
+*/
+export const appendChildren = (parentEl, ...children) => {
+    children.forEach(child => {
+
+        const appendChild = child => {
+            if (child instanceof HTMLElement)
+                parentEl.appendChild(child);
+            else
+                throw new TypeError(`${child}, isn't an instance of HTMLElement`);
+        }
+
+        if (Array.isArray(child))
+            child.forEach(childArrayEl => {
+                appendChild(childArrayEl);
+            })
+        else
+            appendChild(child)
+    })
+    return parentEl;
+};
+
+/**
+ * @function addListeners
+ * @description Even though for simplicity sake you can pass a single string as event
+ * I wouldn't recommend doing it as it adds unnecessary overhead
+ * @param {HTMLElement|Window} el element to be attached with events needs to implement addEventListener
+ * @param {Function} cb event handler function
+ * @param {String|String[]} evts array of qualified event names
+ * @param {Boolean} bubble 
+ *
+ * @return {HTMLElement|Window} el
+**/
+export const addListeners = (el, cb, evts, bubble = false) => {
+    if (el &amp;&amp; typeof el.addEventListener == 'function')
+        if (typeof cb == 'function') {
+            if (Array.isArray(evts)) {
+                for (let e of evts) {
+                    if (typeof e == 'string') {
+                        el.addEventListener(e, cb, bubble)
+                    }
+                }
+                return el
+            } else if (typeof evts == 'string') {
+                el.addEventListener(evts, cb, bubble)
+                return el
+            } else
+                throw new TypeError('Param 3 "evts", is not an array');
+        } else
+            throw new TypeError('Param 2 "cb", is not a function');
+    else
+        throw new TypeError('Param 1 "el", is not an instance of HTMLElement');
+};
+
+/**
+ * @function removeListeners
+ * @description Even though for simplicity sake you can pass a single string as event
+ * I wouldn't recommend doing it as it adds unnecessary overhead
+ * 
+ * @param {HTMLElement|Window} el element
+ * @param {Function} cb handler reference
+ * @param {String|String[]} evts array of events
+ * @param {Boolean} bubble
+ *
+ * @return {HTMLElement|Window} void
+**/
+export const removeListeners = (el, cb, evts, bubble = false) => {
+    bubble = !!bubble
+    if (el &amp;&amp; typeof el.removeEventListener == 'function')
+        if (typeof cb == 'function') {
+            if (Array.isArray(evts)) {
+                for (let e of evts) {
+                    if (typeof e == 'string') {
+                        el.removeEventListener(e, cb, bubble);
+                    }
+                }
+                return el
+            } else if (typeof evts == 'string') {
+                el.removeEventListener(evts, cb, bubble);
+                return el
+            } else
+                throw new TypeError('Param 3 "evts", is not an array')
+        } else
+            throw new TypeError('Param 2 "cb", is not a function')
+    else
+        throw new TypeError('Param 1 "el", is not an instance of HTMLElement');
+};
+/**
+ * @typedef {Object}createElementOptions
+ * @property {String} [tag=div] - type of the element to create, defaults to div
+ * @property {Object.&lt;string, any>} [attributes] 
+ * @property {Object.&lt;string, any>} [styles] 
+ * @property {String} [text] 
+ * @property {String} [html] 
+ * @property {String|String[]} [classes] 
+*/
+/**
+ * @function createElement
+ * @description Create a new HTMLElement
+ * @param {createElementOptions} options - descriptor the newly created element
+ * @return {HTMLElement} instance of HTMLElement
+**/
+export const createElement = ({ html, text, classes, attributes, styles, tag } = {}) => {
+    // let { tag } = rest;
+    if (!tag || typeof tag != 'string')
+        tag = 'div';
+
+    const elem = document.createElement(tag);
+
+    if (typeof attributes == 'string' || isObject(attributes)) {
+        setAttributes(elem, attributes);
+    }
+    if (typeof styles == 'string' || isObject(styles)) {
+        setStyles(elem, styles);
+    }
+    if (typeof classes == 'string' || Array.isArray(classes)) {
+        setClasses(elem, classes);
+    }
+
+    if (typeof text != 'undefined')
+        elem.innerText = text;
+    if (typeof html != 'undefined')
+        elem.innerHTML = html;
+
+    return elem
+};
+/**
+ * @function getBoundEvents
+ * @description Returns every event properties bound to an handler
+ * 
+ * @param {HTMLElement} el element
+ *
+ * @return {Object.&lt;string, Function} every event bound to el through ".onEvent" properties
+**/
+export const getBoundEvents = el => {
+    if (el instanceof HTMLElement || el == window.constructor) {
+        const obj = {};
+        for (let prop in el) {
+            if (prop.substring(0, 2) == 'on' &amp;&amp; typeof el[prop] == 'function')
+                obj[prop] = el[prop];
+        }
+        return obj
+    }
+};
+/**
+ * @function isChildrenOfn
+ * @deprecated better directly using native method HTMLElement.contains
+ * @param {HTMLElement} childNode 
+ * @param {HTMLElement} parentNode 
+*/
+export const isChildrenOf = (childNode, parentNode) => {
+    return parentNode.contains(childNode);
+};
+/**
+ * @function moveNode
+ * @description Change element parent
+ * 
+ * @param {HTMLElement} el element to move
+ * @param {HTMLElement} newParent new parent element
+ * 
+ * @returns {HTMLElement} element
+*/
+export const moveNode = (el, newParent) => {
+    if (el instanceof HTMLElement) {
+        if (newParent instanceof HTMLElement) {
+            if (!newParent.contains(el)) {
+                if (el.parentNode) {
+                    el.parentNode.removeChild(el);
+                }
+                newParent.appendChild(el);
+            }
+            return el
+        } else
+            throw new TypeError('Param 2 "newParent", is not an instance of HTMLElement');
+    } else
+        throw new TypeError('Param 1 "el", is not an instance of HTMLElement');
+};
+
+/**
+ * @function setClasses
+ * @description Adds an array of classes to an element
+ * 
+ * @param {HTMLElement} el element
+ * @param {String[]} classes classes to be set
+ *
+ * @return {HTMLElement} element
+**/
+export const setClasses = (el, classes) => {
+    if (el &amp;&amp; el.classList instanceof DOMTokenList) {
+        if (Array.isArray(classes)) {
+            if (el.classList.length == 0) {
+                el.classList = classes.join(' ');
+            }
+            else {
+                for (let c of classes) {
+                    if (typeof c == 'string')
+                        el.classList.add(c);
+                }
+            }
+        } else if (typeof classes == 'string') {
+            el.classList += `${el.classList.length > 0 ? ' ' : ''}${classes}`;
+        }
+        return el;
+    } else
+        throw new TypeError('Param 1 "el", doesn\'t implement classList as DOMTokenList');
+};
+
+/**
+ * @function removeClasses
+ * @description Remove classes from element.classList
+ * 
+ * @param {HTMLElement} el element
+ * @param {String[]|"all"} classes classes to be unset
+ * 
+ * @returns {HTMLElement} element
+*/
+export const removeClasses = (el, classes) => {
+    if (el &amp;&amp; el.classList instanceof DOMTokenList) {
+        if (Array.isArray(classes)) {
+            for (let s in classes) {
+                el.classList.remove(s);
+            }
+        } else if (classes = 'all') {
+            el.classList = '';
+        }
+        return el;
+    } else
+        throw new TypeError('Param 1 "el", doesn\'t implement classList as DOMTokenList');
+};
+/**
+ * @function setAttributes
+ * @description Set element attributes
+ * 
+ * @param {HTMLElement} el - element
+ * @param {Object.&lt;string, any>} attrs - attributes to set
+ *
+ * @return {HTMLElement} element
+**/
+export const setAttributes = (el, attrs) => {
+    if (el &amp;&amp; el.attributes instanceof NamedNodeMap) {
+        for (let attr in attrs) {
+            if (attr.substring(0, 4) != 'data')
+                el.setAttribute(attr, attrs[attr]);
+            else
+                el.dataset[attr[4].toLowerCase() + attr.substring(5)] = attrs[attr];
+        }
+        return el;
+    } else
+        throw new Error('Param 1 "el", doesn\'t implement attributes as NamedNodeMap');
+};
+
+/** 
+ * @function getAttributes
+ * @description Get attributes of an element
+ *  
+ * @param {HTMLElement} el
+ * @param {String[]} attrs attributes to get
+ * 
+ * @returns {Object.&lt;string, any>} attribute/value object
+**/
+export const getAttributes = (el, attrs) => {
+    if (el &amp;&amp; el.attributes instanceof NamedNodeMap) {
+        const obj = {};
+        for (let attr of attrs) {
+            obj[attr] = el.attributes[attr];
+        }
+        return obj;
+    } else
+        throw new Error('Param 1 "el", doesn\'t implement attributes as NamedNodeMap');
+};
+
+/**
+ * @function removeAttributes
+ * @description Remove attributes from an element
+ * 
+ * @param {HTMLElement} el element
+ * @param {String[]|"all"} attrs attributes to be unset
+ *
+ * @return {HTMLElement} element
+**/
+export const removeAttributes = (el, attrs) => {
+    if (el &amp;&amp; el.attributes instanceof NamedNodeMap) {
+        if (Array.isArray(attrs)) {
+            for (const attr of attrs) {
+                if (typeof attr == 'string')
+                    el.removeAttribute(attr)
+            }
+            return el
+        }
+        else if (attrs === 'all') {
+            for (const attr of el.attributes) {
+                if (attr.name != 'class' &amp;&amp; attr.name != 'style') {
+                    el.removeAttribute(attr.name);
+                }
+            }
+            return el
+        } else
+            throw new TypeError('Param 2 "attrs", is not an array or "all"')
+    } else
+        throw new TypeError('Param 1 "el", doesn\'t implement attributes as NamedNodeMap')
+};
+
+/**
+ * @function setDataAttributes
+ * @description Set data- attributes of an element
+ * 
+ * @param {HTMLElement} el element
+ * @param {Object.&lt;string, string>} attrs data- attributes to be set
+ *
+ * @return {HTMLElement} element
+**/
+export const setDataAttributes = (el, attrs) => {
+    if (el &amp;&amp; el.dataset instanceof DOMStringMap) {
+        for (let attr in attrs) {
+            el.dataset[attr] = attrs[attr];
+        }
+        return el
+    } else
+        throw new TypeError('Param 1 "el", doesn\'t implement dataset as DOMStringMap');
+};
+
+/**
+ * @function removeDataAttributes
+ * @description Remove data- attributes from an element
+ * 
+ * @param {HTMLElement} el element
+ * @param {Object.&lt;string, string>} attrs data- attributes to be removed
+ *
+ * @return {HTMLElement} element
+**/
+export const removeDataAttributes = (el, attrs) => {
+    typeof attrs == 'string' ? attrs = [attrs] : attrs;
+    if (el &amp;&amp; el.dataset instanceof DOMStringMap) {
+        if (Array.isArray(attrs)) {
+            for (let attr of attrs) {
+                el.removeAttribute(`data-${attr}`)
+            }
+            return el
+        } else
+            throw new TypeError('Param 2 "attrs", is not an array');
+    } else
+        throw new TypeError('Param 1 "el", doesn\'t implement dataset as DOMStringMap');
+};
+
+/**
+ * @typedef {Object} CSSPropertyObject
+ * @property {String|Number} value property value
+ * @property {"important"|""} priority css property priority
+*/
+/**
+ * @function setProperties
+ * @description Set custom properties of an element
+ * 
+ * @param {HTMLElement} el element
+ * @param {Object.&lt;string, (String|Number)>|Object.&lt;string, CSSPropertyObject>} props custom properties to be set
+ * 
+ * @returns {HTMLElement} element
+*/
+export const setProperties = (el, props) => {
+    if (el &amp;&amp; el.style instanceof CSSStyleDeclaration) {
+        for (let prop in props) {
+            if (typeof props[prop] == 'object')
+                el.style.setProperty(`--${prop}`, props[prop].value, props[prop].priority)
+            else
+                el.style.setProperty(`--${prop}`, props[prop])
+        }
+        return el
+    } else
+        throw new TypeError('Param 1 "el", doesn\'t implement style as CSSStyleDeclaration');
+};
+
+/**
+ * @function removeProperties
+ * @description Remove custom properties of an element
+ *  
+ * @param {HTMLElement} el element
+ * @param {String|String[]} props array of custom properties to unset
+ * 
+ * @returns {HTMLElement} element
+*/
+export const removeProperties = (el, props) => {
+    if (el &amp;&amp; el.style instanceof CSSStyleDeclaration) {
+        if (Array.isArray(props)) {
+            for (let prop of props) {
+                if (typeof prop == 'string')
+                    el.style.removeProperty(`--${prop}`);
+            }
+        } else if (typeof props == 'string') {
+            el.style.removeProperty(`--${props}`);
+        }
+        return el
+    } else
+        throw new TypeError('Param 1 "el", doesn\'t implement style as CSSStyleDeclaration');
+};
+
+/**
+ * @function setStyles
+ * @description Set inline styles of an element
+ * 
+ * @param {HTMLElement} el element 
+ * @param {Object.&lt;string, (String|Number)>} styles inline styles to apply
+ *
+ * @return {HTMLElement} element
+**/
+export const setStyles = (el, styles) => {
+    if (el &amp;&amp; el.style instanceof CSSStyleDeclaration) {
+        for (let s in styles) {
+            if (el.style[s] != undefined) {
+                el.style[s] = styles[s];
+            }
+        }
+        return el
+    } else
+        throw new TypeError('Param 1 "el", doesn\'t implement style as CSSStyleDeclaration');
+};
+
+/**
+ * @function removeStyles
+ * @description Unset inline styles of an element
+ * 
+ * @param {HTMLElement} el element
+ * @param {String[]|"all"} styles inline styles to be removed
+ *
+ * @return {HTMLElement} element
+**/
+export const removeStyles = (el, styles) => {
+    if (el &amp;&amp; el.style instanceof CSSStyleDeclaration) {
+        if (Array.isArray(styles)) {
+            for (let s of styles) {
+                if (el.style[s] != undefined) {
+                    el.style[s] = null;
+                }
+            }
+        } else if (styles === 'all') {
+            Object.keys(el.style).filter(s => {
+                if (el.style[s] &amp;&amp; isNaN(Number(s)))
+                    el.style[s] = null;
+            })
+        }
+        return el
+    } else
+        throw new TypeError('Param 1 "el", doesn\'t implement style as CSSStyleDeclaration');
+};
+
+/**
+ * @function wrapNode
+ * @description Wrap a node in a created element, returns wrapper
+ * 
+ * @param {HTMLElement} el element to be wrapped
+ * @param {createElementOptions} options definitions for the created wrapper element
+ * 
+ * @returns {HTMLElement} newly created wrapper element with element as children
+*/
+export const wrapNode = (el, options) => {
+    if (el instanceof HTMLElement) {
+        const wrap = createElement(options);
+        el.parentNode.replaceChild(wrap, el);
+        wrap.appendChild(el);
+        return wrap;
+    }
+    else
+        throw new TypeError('TypeError: Param 1 "el", is not an instance of HTMLElement');
+};
+
+/**
+ * @function findElements
+ * @description Find elements matching predicate object properties
+ * Needs at least one of id, tag, classes, attributes prop to be valid
+ * 
+ * @param {Object} predicate object
+ * @param {HTMLElement|Document} [predicate.root=Document]
+ * @param {String} predicate.id matches #id
+ * @param {String} predicate.tag matches &lt;tag />
+ * @param {String[]} predicate.classes matches .classes
+ * @param {String[]} predicate.attributes matches [attr]
+ * 
+ * @returns {Element[]} elements matching predicate
+*/
+export const findElements = ({ root, id, tag, classes, attributes,  }) => {
+    try {
+        if(!root || typeof root.querySelectorAll != 'function')
+            root = document
+        if(typeof tag != 'string')
+            tag = ''
+        if(Array.isArray(classes))
+            classes = `.${classes.join('.')}`
+        else
+            classes = ''
+        if(Array.isArray(attributes))
+            attributes = attributes.map(attr => `[${attr}]`).join('')
+        else
+            attributes = ''
+        if(typeof id == 'string')
+            id = '#' + id
+        else
+            id = ''
+        return Array.from(root.querySelectorAll(`${tag}${id}${classes}${attributes}`))
+    } catch(err) {
+        throw SyntaxError('predicate needs to have at least one valid field')
+    }
+};
+
+/**
+ * @function hasClasses
+ * @description Returns true if element matches all classes in array
+ * 
+ * @param {HTMLElement} targetEl element
+ * @param {String|String[]} classes classes to be tested
+ * 
+ * @returns {Boolean} true if element has classes
+ */
+export const hasClasses = (targetEl, classes) => {
+    if (Array.isArray(classes))
+        return classes.reduce((acc, val) => acc &amp;&amp; targetEl.classlist.contains(val), true);
+
+    else if (typeof classes == 'string')
+        return targetEl.classlist.contains(classes);
+};
+
+/**
+ * @function hasAttributes
+ * @description Returns true if element matches all attributes in array
+ * 
+ * @param {HTMLElement} targetEl element
+ * @param {String|String[]} attributes attributes to be tested
+ * 
+ * @returns {Boolean} true if element has attributes
+*/
+export const hasAttributes = (targetEl, attributes) => {
+
+    if (Array.isArray(attributes))
+        return attributes.reduce((acc, val) => acc &amp;&amp; targetEl.hasAttribute(val), true);
+
+    else if (typeof attributes == 'string')
+        return targetEl.hasAttribute(attributes);
+
+};
+
+/**
+ * @function addChildrenListener
+ * @description bind event listener to a parent 
+ * 
+ * @param {HTMLElement|Document|Window} parentEl 
+ * @param {String} childrenSelector 
+ * @param {String[]} events 
+ * @param {Function} handler 
+ * @param {Boolean} bubble 
+ */
+export const addChildrenListener = (parentEl, childrenSelector, events, handler, bubble) => {
+    if (parentEl instanceof HTMLElement) {
+
+
+        // const { id, classes, attributes, tag, } = typeof childrenSelector == 'object' ? childrenSelector : {};
+
+
+        const handlerWrapper = eventObject => {
+
+            const { target } = eventObject
+
+            const desiredTarget = target.closest(childrenSelector)
+            // if(typeof childrenSelector == 'string' &amp;&amp; )
+            // return
+
+            const wantedEvent = new Proxy(eventObject, {
+                get: function (e, prop) {
+                    if (prop == 'target')
+                        return desiredTarget;
+                    else
+                        return e[prop];
+                }
+            })
+
+            if (desiredTarget) {
+
+                typeof handler == 'function' &amp;&amp; handler(wantedEvent);
+
+            }
+        }
+
+        addListeners(parentEl, handlerWrapper, events, true);
+
+    }
+    else
+        throw new TypeError('Param 1 "parentEl", is not an instance of HTMLElement');
+};
+
+/** 
+ * @function attachEvts
+ * @description alias for DOMUtils.addListeners function
+ * @see {@link DOMUtils.addListeners}
+*/
+export const attachEvts = addListeners
+
+/** 
+ * @function detachEvts
+ * @description alias for DOMUtils.removeListeners function
+ * @see {@link DOMUtils.removeListeners}
+*/
+export const detachEvts = removeListeners
+
+export default {
+    appendChildren,
+    attachEvts: addListeners,
+    addListeners,
+    detachEvts: removeListeners,
+    removeListeners,
+    createElement,
+    getBoundEvents,
+    isChildrenOf,
+    moveNode,
+    setClasses,
+    removeClasses,
+    setAttributes,
+    getAttributes,
+    removeAttributes,
+    setDataAttributes,
+    removeDataAttributes,
+    setProperties,
+    removeProperties,
+    setStyles,
+    removeStyles,
+    wrapNode,
+    findElements,
+    hasClasses,
+    hasAttributes,
+    addChildrenListener,
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Tue May 26 2020 03:23:54 GMT+0200 (GMT+02:00) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

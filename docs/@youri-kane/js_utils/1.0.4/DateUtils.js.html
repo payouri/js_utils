@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DateUtils.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html">Extra</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#addListeners">addListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#appendChildren">appendChildren</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#getAttributes">getAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeAttributes">removeAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeClasses">removeClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeDataAttributes">removeDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeListeners">removeListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeProperties">removeProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeStyles">removeStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setAttributes">setAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setClasses">setClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setDataAttributes">setDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setProperties">setProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setStyles">setStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#wrapNode">wrapNode</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-ArrayUtils.html">ArrayUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~chunkArray">chunkArray</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~falsyBounce">falsyBounce</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~getElementAt">getElementAt</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~intersection">intersection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~mergeArrays">mergeArrays</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~randomPick">randomPick</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-AsyncUtils.html">AsyncUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-AsyncUtils.html#~batchPromiseExecution">batchPromiseExecution</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-CanvasUtils.html">CanvasUtils</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-DateUtils.html">DateUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~dateFromObjectId">dateFromObjectId</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~daysInMonth">daysInMonth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~getFirstDayOfTheMonth">getFirstDayOfTheMonth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~getLastDayOfTheMonth">getLastDayOfTheMonth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~timeAgo">timeAgo</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-DOMUtils.html">DOMUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~addChildrenListener">addChildrenListener</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~addListeners">addListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~appendChildren">appendChildren</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~attachEvts">attachEvts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~createElement">createElement</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~detachEvts">detachEvts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~findElements">findElements</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~getAttributes">getAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~getBoundEvents">getBoundEvents</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~hasAttributes">hasAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~hasClasses">hasClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~isChildrenOfn">isChildrenOfn</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~moveNode">moveNode</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeAttributes">removeAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeClasses">removeClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeDataAttributes">removeDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeListeners">removeListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeProperties">removeProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeStyles">removeStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setAttributes">setAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setClasses">setClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setDataAttributes">setDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setProperties">setProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setStyles">setStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~wrapNode">wrapNode</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-EventUtils.html">EventUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-EventUtils.html#~debounce">debounce</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-EventUtils.html#~throttle">throttle</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-GeomUtils.html">GeomUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~calcPointCoordsOnCircle">calcPointCoordsOnCircle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~distBetweenTwoPts">distBetweenTwoPts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~getCirclePerimeter">getCirclePerimeter</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~getDiscArea">getDiscArea</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-MathUtils.html">MathUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-MathUtils.html#~clamp">clamp</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-MathUtils.html#~random">random</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-MathUtils.html#~randomInt">randomInt</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-NodeEnhancer.html">NodeEnhancer</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-ObjectUtils.html">ObjectUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ObjectUtils.html#~getDiffs">getDiffs</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ObjectUtils.html#~hasProperties">hasProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ObjectUtils.html#~mergeDeep">mergeDeep</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-OtherUtils.html">OtherUtils</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-SortUtils.html">SortUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-SortUtils.html#~localeSort">localeSort</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-SortUtils.html#~quickSort">quickSort</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-SortUtils.html#~sortByNestedProperty">sortByNestedProperty</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-StringUtils.html">StringUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~capitalize">capitalize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~capitalizeWords">capitalizeWords</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~encodeHTML">encodeHTML</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~generateHexKey">generateHexKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~generateRandom">generateRandom</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~nFormatter">nFormatter</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~replaceAll">replaceAll</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~secsToMin">secsToMin</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~stringToFunction">stringToFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~unCapitalize">unCapitalize</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Validators.html">Validators</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Validators.html#~isObject">isObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Validators.html#~isValidEmail">isValidEmail</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Validators.html#~isValidPhone">isValidPhone</a></span></li><li class="nav-heading">Namespaces</li><li class="nav-heading"><span class="nav-item-type type-namespace">N</span><span class="nav-item-name"><a href="module-ArrayUtils-ArrayUtils.html">ArrayUtils</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">DateUtils.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module DateUtils */
+/**
+ * @function daysInMonth
+ * @description Get the number of days in a month
+ * 
+ * @param {Number} month from 0 to 11
+ * @param {Number} year from 1970 YYYY format
+ * 
+ * @returns {Number} Number of days in the request moth
+*/
+export const daysInMonth = function (month, year) {
+    return new Date(Date.UTC(year, month + 1, 0)).getDate();
+}
+/**
+ * @function getLastDayOfTheMonth
+ * @description Get the a Date object of the last day in specified month
+ * 
+ * @param {Number} month from 0 to 11
+ * @param {Number} year from 1970 YYYY format
+ * 
+ * @returns {Date} Date
+ */
+export const getLastDayOfTheMonth = function (month, year) {
+    return new Date(Date.UTC(year, month, daysInMonth(month, year)));
+}
+/**
+ * @function getFirstDayOfTheMonth
+ * @description Get the a Date object of the first day in specified month 
+ * 
+ * @param {Number} month from 0 to 11
+ * @param {Number} year from 1970 YYYY format
+ * 
+ * @returns {Date} Date
+*/
+export const getFirstDayOfTheMonth = function (month, year) {
+    return new Date(Date.UTC(year, month, 1));
+}
+/**
+ * @typedef formatObject
+ * @property {String} locale country locale
+ * @property {Object&lt;string, string>} [options] toLocaleDateString format object
+*/
+/**  
+ * @typedef dateFormatType
+ * @enum {"iso"|"string"|formatObject}
+ */
+/**
+ * @function dateFromObjectId
+ * @description Convert a Mongo ObjectID to a Date Object or a Date String depending on format param
+ * 
+ * @param {ObjectID} objectId object id to transform
+ * @param {dateFormatType} [format] if undefined return Date object
+ * 
+ * @return {String|Number} formatted date string or timestamp in ms
+ */
+export const dateFromObjectId = function (objectId, format) {
+
+    if (typeof format == 'object' &amp;&amp; format.locale)
+        return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toLocaleDateString(format.locale, format.options || {})
+
+    if (format == 'iso')
+        return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toISOString()
+
+    if (format == 'string')
+        return (new Date(parseInt(objectId.substring(0, 8), 16) * 1000)).toDateString()
+
+    return new Date(parseInt(objectId.substring(0, 8), 16) * 1000).getTime()
+
+};
+/**
+ * @function timeAgo
+ * @description Returns a date or a timestamp to elapsed time format
+ * 
+ * @param {Date|Number} time 
+ * @param {Object} options template property allow you to use different string for all time frames, prefix, and suffix 
+ * @param {templates} [options.templates]
+ * 
+ * @returns {String} formatted time ago
+ */
+export const timeAgo = function (time, { templates } = {}) {
+    /**
+     * @typedef {Object} templates
+     * @property {string} prefix
+     * @property {string} suffix
+     * @property {string} seconds
+     * @property {string} minute
+     * @property {string} minutes
+     * @property {string} hour
+     * @property {string} hours
+     * @property {string} day
+     * @property {string} days
+     * @property {string} month
+     * @property {string} months
+     * @property {string} year
+     * @property {string} years
+    */
+    const defaultTemplates = {
+        prefix: "",
+        suffix: " ago",
+        seconds: "less than a minute",
+        minute: "about a minute",
+        minutes: "%d minutes",
+        hour: "about an hour",
+        hours: "about %d hours",
+        day: "a day",
+        days: "%d days",
+        month: "about a month",
+        months: "%d months",
+        year: "about a year",
+        years: "%d years"
+    };
+
+    const currentTemplates = { ...defaultTemplates, ...templates }
+
+    const getTemplate = function (t, n) {
+        return currentTemplates[t] &amp;&amp; currentTemplates[t].replace(/%d/i, Math.abs(Math.round(n)));
+    };
+
+    const timer = function (time) {
+
+        if (!time) return;
+        if (!isNaN(Number(time))) time = new Date(time);
+        if (time instanceof Date) time = String(time);
+
+        time = time.replace(/\.\d+/, ""); // remove milliseconds
+        time = time.replace(/-/, "/").replace(/-/, "/");
+        time = time.replace(/T/, " ").replace(/Z/, " UTC");
+        time = time.replace(/([\+\-]\d\d)\:?(\d\d)/, " $1$2"); // -04:00 -> -0400
+        time = new Date(time * 1000 || time);
+
+        const now = new Date();
+        const seconds = ((now.getTime() - time) * .001) >> 0;
+        const minutes = seconds / 60;
+        const hours = minutes / 60;
+        const days = hours / 24;
+        const years = days / 365;
+
+        return currentTemplates.prefix + (
+            seconds &lt; 45 &amp;&amp; getTemplate('seconds', seconds) ||
+            seconds &lt; 90 &amp;&amp; getTemplate('minute', 1) ||
+            minutes &lt; 45 &amp;&amp; getTemplate('minutes', minutes) ||
+            minutes &lt; 90 &amp;&amp; getTemplate('hour', 1) ||
+            hours &lt; 24 &amp;&amp; getTemplate('hours', hours) ||
+            hours &lt; 42 &amp;&amp; getTemplate('day', 1) ||
+            days &lt; 30 &amp;&amp; getTemplate('days', days) ||
+            days &lt; 45 &amp;&amp; getTemplate('month', 1) ||
+            days &lt; 365 &amp;&amp; getTemplate('months', days / 30) ||
+            years &lt; 1.5 &amp;&amp; getTemplate('year', 1) ||
+            getTemplate('years', years)) + currentTemplates.suffix;
+    };
+    return timer(time);
+};
+
+export default {
+    dateFromObjectId,
+    timeAgo,
+    daysInMonth,
+    getLastDayOfTheMonth,
+    getFirstDayOfTheMonth,
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Tue May 26 2020 03:23:54 GMT+0200 (GMT+02:00) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

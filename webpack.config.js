@@ -6,7 +6,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js_utils.js',
-        library: 'Javascript Utils',
+        library: 'JavascriptUtils',
         libraryTarget: 'umd',
         globalObject: 'this'
     },

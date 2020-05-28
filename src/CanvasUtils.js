@@ -1,3 +1,4 @@
+/** @module CanvasUtils */
 import { createElement } from './DOMUtils'
 
 export const createDOMCanvas = ({...args} = {}) => createElement({

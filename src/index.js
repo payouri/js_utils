@@ -10,6 +10,8 @@ import Validators from './Validators'
 import OtherUtils from './OtherUtils'
 import SortUtils from './SortUtils'
 
+import NodeEnhancer from './NodeEnhancer/NodeEnhancer'
+
 export default {
   ArrayUtils,
   CanvasUtils,
@@ -22,4 +24,5 @@ export default {
   Validators,
   OtherUtils,
   SortUtils,
+  NodeEnhancer,
 };

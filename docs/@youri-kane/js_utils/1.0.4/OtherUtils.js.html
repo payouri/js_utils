@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OtherUtils.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html">Extra</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#addListeners">addListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#appendChildren">appendChildren</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#getAttributes">getAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeAttributes">removeAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeClasses">removeClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeDataAttributes">removeDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeListeners">removeListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeProperties">removeProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#removeStyles">removeStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setAttributes">setAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setClasses">setClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setDataAttributes">setDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setProperties">setProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#setStyles">setStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-NodeEnhancer.Extra.html#wrapNode">wrapNode</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-ArrayUtils.html">ArrayUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~chunkArray">chunkArray</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~falsyBounce">falsyBounce</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~getElementAt">getElementAt</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~intersection">intersection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~mergeArrays">mergeArrays</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ArrayUtils.html#~randomPick">randomPick</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-AsyncUtils.html">AsyncUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-AsyncUtils.html#~batchPromiseExecution">batchPromiseExecution</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-CanvasUtils.html">CanvasUtils</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-DateUtils.html">DateUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~dateFromObjectId">dateFromObjectId</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~daysInMonth">daysInMonth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~getFirstDayOfTheMonth">getFirstDayOfTheMonth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~getLastDayOfTheMonth">getLastDayOfTheMonth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DateUtils.html#~timeAgo">timeAgo</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-DOMUtils.html">DOMUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~addChildrenListener">addChildrenListener</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~addListeners">addListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~appendChildren">appendChildren</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~attachEvts">attachEvts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~createElement">createElement</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~detachEvts">detachEvts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~findElements">findElements</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~getAttributes">getAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~getBoundEvents">getBoundEvents</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~hasAttributes">hasAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~hasClasses">hasClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~isChildrenOfn">isChildrenOfn</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~moveNode">moveNode</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeAttributes">removeAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeClasses">removeClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeDataAttributes">removeDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeListeners">removeListeners</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeProperties">removeProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~removeStyles">removeStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setAttributes">setAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setClasses">setClasses</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setDataAttributes">setDataAttributes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setProperties">setProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~setStyles">setStyles</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-DOMUtils.html#~wrapNode">wrapNode</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-EventUtils.html">EventUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-EventUtils.html#~debounce">debounce</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-EventUtils.html#~throttle">throttle</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-GeomUtils.html">GeomUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~calcPointCoordsOnCircle">calcPointCoordsOnCircle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~distBetweenTwoPts">distBetweenTwoPts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~getCirclePerimeter">getCirclePerimeter</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-GeomUtils.html#~getDiscArea">getDiscArea</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-MathUtils.html">MathUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-MathUtils.html#~clamp">clamp</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-MathUtils.html#~random">random</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-MathUtils.html#~randomInt">randomInt</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-NodeEnhancer.html">NodeEnhancer</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-ObjectUtils.html">ObjectUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ObjectUtils.html#~getDiffs">getDiffs</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ObjectUtils.html#~hasProperties">hasProperties</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ObjectUtils.html#~mergeDeep">mergeDeep</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-OtherUtils.html">OtherUtils</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-SortUtils.html">SortUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-SortUtils.html#~localeSort">localeSort</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-SortUtils.html#~quickSort">quickSort</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-SortUtils.html#~sortByNestedProperty">sortByNestedProperty</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-StringUtils.html">StringUtils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~capitalize">capitalize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~capitalizeWords">capitalizeWords</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~encodeHTML">encodeHTML</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~generateHexKey">generateHexKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~generateRandom">generateRandom</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~nFormatter">nFormatter</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~replaceAll">replaceAll</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~secsToMin">secsToMin</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~stringToFunction">stringToFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-StringUtils.html#~unCapitalize">unCapitalize</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Validators.html">Validators</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Validators.html#~isObject">isObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Validators.html#~isValidEmail">isValidEmail</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Validators.html#~isValidPhone">isValidPhone</a></span></li><li class="nav-heading">Namespaces</li><li class="nav-heading"><span class="nav-item-type type-namespace">N</span><span class="nav-item-name"><a href="module-ArrayUtils-ArrayUtils.html">ArrayUtils</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">OtherUtils.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module OtherUtils */
+
+export const nextTick = func => {
+    setTimeout(func, 0)
+}
+
+export const getInlineTransforms = HTMLElem => {
+    const transformTypes = [{
+        name: 'scale',
+        variants: ['X', 'Y', 'Z', '3d'],
+    },
+    {
+        name: 'translate',
+        variants: ['X', 'Y', 'Z', '3d'],
+    },
+    {
+        name: 'rotate',
+        variants: ['X', 'Y', 'Z', '3d'],
+    },
+    {
+        name: 'skew',
+        variants: ['X', 'Y'],
+    },
+    {
+        name: 'perspective',
+        variants: [],
+    },
+    {
+        name: 'matrix',
+        variants: ['3d'],
+    },
+    ],
+        elemTransformStr = HTMLElem.style.transform.toLowerCase();
+
+    return transformTypes.map(t => {
+        const transformModel = {
+            name: '',
+            transform: {
+                X: 0,
+                Y: 0,
+                Z: 0,
+            }
+        },
+            transformPosition = elemTransformStr.indexOf(t.name);
+        transformModel.name = t.name;
+        if (transformPosition != -1) {
+            let transformVariant = elemTransformStr.charAt(transformPosition + t.name.length).toUpperCase();
+            if (transformVariant === '3') transformVariant = '3d';
+            if (t.variants.includes(transformVariant) &amp;&amp; transformVariant != '3d') {
+                transformModel.transform[transformVariant] = elemTransformStr.substring(transformPosition + t.name.length + 2, elemTransformStr.indexOf(')', transformPosition))
+            } else if (transformVariant == '3d' &amp;&amp; t.name != 'matrix') {
+                const transformValues = elemTransformStr.substring(transformPosition + t.name.length + 3, elemTransformStr.indexOf(')', transformPosition));
+                let X = Y = Z = 0,
+                    unit;
+                let valuesArray = StringUtils.replaceAll(transformValues, ' ', '').split(',');
+                X = valuesArray[0] ? valuesArray[0] : 0;
+                Y = valuesArray[1] ? valuesArray[1] : 0;
+                Z = valuesArray[2] ? valuesArray[2] : 0;
+                unit = valuesArray[3] ? valuesArray[3] : 0;
+                transformModel.transform = {
+                    X,
+                    Y,
+                    Z,
+                    unit
+                };
+            } else {
+                const transformValues = elemTransformStr.substring(transformPosition + t.name.length + 1, elemTransformStr.indexOf(')', transformPosition));
+                let X = Y = Z = 0;
+                if (transformValues.indexOf(',') != -1) {
+                    let valuesArray = StringUtils.replaceAll(transformValues, ' ', '').split(',');
+                    if (t.name != 'matrix') {
+                        X = valuesArray[0] ? valuesArray[0] : 0;
+                        Y = valuesArray[1] ? valuesArray[1] : 0;
+                        Z = valuesArray[2] ? valuesArray[2] : 0;
+                        transformModel.transform = {
+                            X,
+                            Y,
+                            Z
+                        };
+                    } else {
+                        transformModel.transform = valuesArray;
+                    }
+                } else if (transformValues.length > 0) {
+                    if (t.name != 'rotate' &amp;&amp; t.name != 'perspective') {
+                        X = transformValues;
+                        Y = transformValues;
+                        Z = 0;
+                        transformModel.transform = {
+                            X,
+                            Y,
+                            Z
+                        };
+                    } else {
+                        X = 0;
+                        Y = 0;
+                        Z = transformValues;
+                        transformModel.transform = {
+                            X,
+                            Y,
+                            Z
+                        };
+                    }
+                }
+            }
+        }
+        return transformModel;
+    });
+}
+
+export const mouseTouchOffset = event => {
+
+    const type = event.type ? event.type : null;
+
+    const elemBCR = event.currentTarget &amp;&amp; typeof event.currentTarget.getBoundingClientRect == 'function' ?
+        event.currentTarget.getBoundingClientRect() :
+        event.target &amp;&amp; typeof event.target.getBoundingClientRect == 'function' ?
+            event.target.getBoundingClientRect() : {
+                x: 0,
+                y: 0
+            }
+
+    if (event instanceof MouseEvent) {
+        return {
+            x: event.x - elemBCR.x,
+            y: event.y - elemBCR.y,
+        }
+    } else if (event instanceof TouchEvent) {
+        if (event.touches &amp;&amp; event.touches[0])
+            return {
+                x: event.touches[0].clientX - elemBCR.x,
+                y: event.touches[0].clientY - elemBCR.y,
+            }
+        else
+            return {
+                x: null,
+                y: null
+            }
+    }
+}
+// touchesPosToArray: event => {
+//   if(event instanceof TouchEvent) {
+//     const touches = [];
+//     if(event.touches.length > 0)
+//       console.log(event.touches)
+//       for(let touch in event.touches) {
+//         console.log(touch);
+//       }
+//   }
+// },
+export const getFirstTouch = ({ touches }) => {
+
+    if (touches &amp;&amp; touches[0])
+        return touches[0]
+    else
+        return null
+
+}
+
+export default {
+    getInlineTransforms,
+    mouseTouchOffset,
+    getFirstTouch,
+    nextTick,
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Tue May 26 2020 03:23:54 GMT+0200 (GMT+02:00) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
