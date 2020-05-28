@@ -1,6 +1,6 @@
 {
   "name": "@youri-kane/js_utils",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "a few javascript functions used often we don't want to rewrite all the time",
   "type": "module",
   "main": "dist/js_utils.js",
@@ -8,7 +8,6 @@
   "scripts": {
     "build": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js ./src/index.js",
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
-    "generate-docs/md": "node_modules/.bin/jsdoc2md --configure .jsdoc.json --files src/",
     "test": "jest",
     "test-verbose": "jest --coverage --config ./jest.config.js"
   },

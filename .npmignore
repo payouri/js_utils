@@ -1,3 +1,9 @@
 coverage/
 node_modules/
 docs/
+jsdoc-template/
+jest.config.js
+.babelrc
+.gitignore
+.jsdoc.json
+Todo.md

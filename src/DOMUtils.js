@@ -96,16 +96,16 @@ export const removeListeners = (el, cb, evts, bubble = false) => {
 /**
  * @typedef {Object} createElementOptions
  * @property {String} [tag=div] - type of the element to create, defaults to div
- * @property {Object.<string, any>} [attributes] 
- * @property {Object.<string, any>} [styles] 
- * @property {String} [text] 
- * @property {String} [html] 
- * @property {String|String[]} [classes] 
+ * @property {Object.<string, any>} [attributes] - html attributes definition
+ * @property {Object.<string, any>} [styles] - inline style object
+ * @property {String} [text] - element inner text
+ * @property {String} [html] - element inner html
+ * @property {String|String[]} [classes] - html element classes
 */
 /**
  * @function createElement
  * @description Create a new HTMLElement
- * @param {createElementOptions} options - descriptor the newly created element
+ * @param {...createElementOptions} options - descriptor the newly created element
  * @return {HTMLElement} instance of HTMLElement
 **/
 export const createElement = ({ html, text, classes, attributes, styles, tag } = {}) => {
@@ -455,7 +455,7 @@ export const removeStyles = (el, styles) => {
  * @description Wrap a node in a created element, returns wrapper
  * 
  * @param {HTMLElement} el element to be wrapped
- * @param {createElementOptions} options definitions for the created wrapper element
+ * @param {...createElementOptions} options definitions for the created wrapper element
  * 
  * @returns {HTMLElement} newly created wrapper element with element as children
 */

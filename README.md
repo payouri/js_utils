@@ -16,5 +16,5 @@ It also serves the purpose to help manipulate the DOM when a framework like reac
 - **test**: run jest tests
 - **test-verbose**: run tests and generate coverage reports
 
-[Online Docs](https://payouri.github.io/js_utils/index.html)
+[Online Docs](https://payouri.github.io/js_utils/index.html) </br>
 [Available on CodePen](https://codepen.io/Zorlimar/pen/vQQmOo)

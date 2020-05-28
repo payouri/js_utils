@@ -1,7 +1,11 @@
 /** @module CanvasUtils */
 import { createElement } from './DOMUtils'
 
-export const createDOMCanvas = ({...args} = {}) => createElement({
+/**
+ * 
+ * @param {Create} args 
+ */
+export const createDOMCanvas = args => createElement({
     tag: 'canvas',
     ...args
 });
